@@ -16,7 +16,11 @@
     
     <div class="Dash-top">
         <img src="Styles/BGpics/PCU Logo.png">
-        <a href="" id="Logout"><i class="fa-solid fa-arrow-right-from-bracket"> Logout</i></a>
+        <a href="Login.php" id="Logout"><i class="fa-solid fa-arrow-right-from-bracket">  Logout</i></a>
+        <a href="Dash-usr"><i class="fa-regular fa-user">  Username</i></a>
+        
+
+
     </div>
     
     <div class="Dash-side">
@@ -25,13 +29,13 @@
                    <a href="Dashboard.php"><i class="fa-solid fa-gauge "></i><span class="menuText"> Dashboard</span></a>
                 </li>
                 <li>
-                    <a href="Report.php"><i class="fa-solid fa-arrow-trend-up"></i><span class="menuText" > Purchase History</span></a>
+                    <a href="Purchase.php"><i class="fa-solid fa-arrow-trend-up"></i><span class="menuText" > Purchase History</span></a>
                 </li>
                 <li >
                     <a href="Products.php"><i class="fa-solid fa-shirt"></i><span class="menuText" > Products</span></a>
                 </li>
                 <li >
-                    <a href="QRCode.php"><i class="fa-solid fa-qrcode"></i><span class="menuText" > QR Code</span></a>
+                    <a href="QR_Gen.php"><i class="fa-solid fa-qrcode"></i><span class="menuText" > QR Code</span></a>
                 </li>
                 
             </ul>

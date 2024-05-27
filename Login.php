@@ -41,10 +41,9 @@
                     </div>
             </form>
         </div>
-        <div class="Login-footer">
-            Powered by COI
-            <img src="Styles/BGpics/COI Logo.png">
-            <img src="Styles/BGpics/ComSoc Logo.png">
-        </div>
+            
+        
+
+     
 </body>
 </html>
