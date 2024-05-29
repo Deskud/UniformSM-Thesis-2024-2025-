@@ -1,3 +1,9 @@
+/* Remove Blue Link Highlight */
+a{
+    color: inherit;
+}
+
+
 
 /* Start Login Page */
 
@@ -150,67 +156,29 @@ h5{
 
 
 /* Start Dashboard Page */
-
-.Main-body{
-    background-color: #ffffff ;
+.Dashboard-main{
+    background-color:rgb(255, 255, 255);
+    ;
 }
-
-.pcu-log-main{
-width: auto;
-height: auto;
+#Navbar-bootstrap{
+    color: white;
 
 }
 
-.Dash-top{
-    background: #0454ac;
-    width: 100%;
-    height: 90px;
-   
-    
-}
-.Dash-top img{
-    margin-top: 10px;
-    margin-left: 95px;
-    padding: 2px;
-    width: 65px;
+#Sidebar-bootstrap{
+    position: fixed;
+    height: 100%;
+    overflow: auto;
 
 }
-
-.Dash-top a{
-    color: aliceblue;
-    display: block;
-    float: right;
-    margin-top: 10px;
-    margin-right: 20px;
+hr{
+    margin: 1rem 0;
+    color: white;
+    border-top: 1px solid rgb(255 255 255 / 10%);
 }
-.Dash-top a:hover{
-    opacity: 0.5;
-    transition: 0.2s;
-}
-.Dash-side{
-    background-color: #343c44;
-    width: 250px;
-    height: 900px;
-}
-.Dash-side a{
-    color: aliceblue;
-    text-decoration: none;
 
 
-    
-}
-.Dash-side-lists li{
-    list-style-type: none;
-    padding: 20px 15px;
-    text-transform: uppercase;
-    text-align: left;
-    font-size: 20px;
-}
-ul.Dash-side-lists li:hover{
-    padding: 20px 15px;
-    opacity: 0.5;
-    transition: 0.2s;
-}
+
 
 
 
