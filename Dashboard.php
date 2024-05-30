@@ -21,7 +21,8 @@
       <img src="Styles/BGpics/PCU Logo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
     Uniform Stock Monitoring System
     </a>
-    <a class="navbar-logout" href="#" ><i class="fa-solid fa-right-from-bracket"></i>
+    <a class="navbar-logout" href="#" >
+      <i class="fa-solid fa-right-from-bracket"></i>
     Sign out
     </a>
   </div>
@@ -73,7 +74,7 @@
 
 <!-- Dashboard Table  -->
 
-<table class="table">
+<table class="table table-bordered" style="width: 50%;">
   <thead>
     <tr>
       <th scope="col">Product</th>
@@ -82,6 +83,10 @@
       <th scope="col">Quantity</th>
     </tr>
   </thead>
+    <td>PE Uniform </td>
+    <td>Large </td>
+    <td>P350.00 </td>
+    <td>20 </td>
   <tbody>
   
   </tbody>
@@ -91,8 +96,8 @@
 <!-- End Dashboard Table -->
 
 
-<!-- Pages -->
-<nav aria-label="Page navigation example">
+<!-- Page Search -->
+<nav aria-label="Search results pages">
   <ul class="pagination justify-content-center">
     <li class="page-item disabled">
       <a class="page-link">Previous</a>
@@ -105,7 +110,8 @@
     </li>
   </ul>
 </nav>
-<!-- Pages end -->
+
+<!-- End Page Search -->
 
 </body>
 </html>

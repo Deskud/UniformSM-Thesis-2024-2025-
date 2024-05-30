@@ -1,7 +1,27 @@
+/* Start of Global Stlyes */
+
+
 /* Remove Blue Link Highlight */
 a{
     color: inherit;
+    
 }
+a:hover{
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+}
+table {
+    table-layout: fixed;
+    word-wrap: break-word;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+td,th {
+  padding: 0;
+}
+
+/* End of Global Styles */
 
 
 
