@@ -5,6 +5,10 @@
     $dbname = "admin";
 
 
-    $connne = new mysqli($servername, $username, $password, $dbname);
+    $conne = new mysqli($servername, $username, $password, $dbname);
+
+    if(!$conne){
+        echo "Connection FAILED!";
+    }
 
 ?>

@@ -1,4 +1,6 @@
 <?php
+  session_start()
+
 
 ?>
 
@@ -21,7 +23,7 @@
       <img src="Styles/BGpics/PCU Logo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
     Uniform Stock Monitoring System
     </a>
-    <a class="navbar-logout" href="#" >
+    <a class="navbar-logout" href="Logout.php" >
       <i class="fa-solid fa-right-from-bracket"></i>
     Sign out
     </a>
@@ -35,7 +37,8 @@
 <div id="Sidebar-bootstrap" class="shadow-sm d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary bg-dark" style="width: 280px;">
     <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <span class="fs-4">
-            Admin
+        <!-- <?=$user['usern_name'] ?> -->
+        Admin
         </span>
     </a>
 <hr>
