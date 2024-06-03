@@ -21,6 +21,21 @@ td,th {
   padding: 0;
 }
 
+.btn{
+    color: #566787;
+    float: right;
+    font-size: 15px;
+    background: #fff;
+    border: none;
+    min-width: 50px;
+    border-radius: 2px;
+    border: none;
+    outline: none !important;
+    margin-left: 10px;
+    margin-right: 500px;
+    margin-top: 10px;
+}
+
 /* End of Global Styles */
 
 

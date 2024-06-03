@@ -37,20 +37,19 @@
 <div id="Sidebar-bootstrap" class="shadow-sm d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary bg-dark" style="width: 280px;">
     <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <span class="fs-4">
-        <!-- <?=$user['usern_name'] ?> -->
         Admin
         </span>
     </a>
 <hr>
 <ul class="nav nav-pills flex-column mb-auto">
 
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="Dashboard.php" class="nav-link text-white" aria-current="page">
         <i class="fa-solid fa-gauge"></i>
           Dashboard
         </a>
       </li>
       <li>
-        <a href="Purchase.php" class="nav-link text-white">
+        <a href="#" class="nav-link active">
         <i class="fa-solid fa-arrow-trend-up"></i>
           Purchase History
         </a>
@@ -73,6 +72,19 @@
   </div>
 
 <!-- End Sidebar -->
+
+
+
+
+
+<!--Export button download -->
+<div>
+    <button class="btn"><i class="fa-solid fa-file-excel"></i>
+    <span> Export to Excel</span>
+    </button>
+</div>
+
+<!--Export button download end-->
 
 
 <!-- Dashboard Table  -->
@@ -115,6 +127,8 @@
 </nav>
 
 <!-- End Page Search -->
+
+
 
 </body>
 </html>

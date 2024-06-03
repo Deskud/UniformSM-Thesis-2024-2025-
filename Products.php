@@ -44,7 +44,7 @@
 <hr>
 <ul class="nav nav-pills flex-column mb-auto">
 
-        <a href="#" class="nav-link active" aria-current="page">
+        <a href="Dashboard.php" class="nav-link text-white" aria-current="page">
         <i class="fa-solid fa-gauge"></i>
           Dashboard
         </a>
@@ -56,7 +56,7 @@
         </a>
       </li>
       <li>
-        <a href="Products.php" class="nav-link text-white">
+        <a href="#" class="nav-link active">
         <i class="fa-solid fa-shirt"></i>
           Products
         </a>
@@ -74,47 +74,71 @@
 
 <!-- End Sidebar -->
 
+<!-- Crud template temp -->
+<div class="container-xl">
+	<div class="table-responsive">
+		<div class="table-wrapper">
+			<div class="table-title">
+				<div class="row">
+					<div class="col-sm-6">
+					</div>
+				</div>
+			</div>
+			<table class="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>
+							<span class="custom-checkbox">
+								<input type="checkbox" id="selectAll">
+								<label for="selectAll"></label>
+							</span>
+						</th>
+						<th>Product</th>
+            <th>Size</th>
+						<th>Price</th>
+						<th>Quantity</th>
+						<th>Gender</th>
+						<th>Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<span class="custom-checkbox">
+								<input type="checkbox" id="checkbox1" name="options[]" value="1">
+								<label for="checkbox1"></label>
+							</span>
+						</td>
+						<td>PE Uniform</td>
+            <td>Large</td>
+						<td>P350.00</td>
+						<td>20</td>
+						<td>Female</td>
+						<td>
+            <a href="#" class="edit" data-toggle="modal"><i class="fa-solid fa-pen-to-square"></i></a>
+						<a href="#" class="delete" data-toggle="modal"><i class="fa-solid fa-trash"></i></a>
+            <a href="#" class="archive" data-toggle="modal"><i class="fa-solid fa-box-archive"></i></a>
 
-<!-- Dashboard Table  -->
-
-<table class="table table-bordered" style="width: 50%;">
-  <thead>
-    <tr>
-      <th scope="col">Product</th>
-      <th scope="col">Size</th>
-      <th scope="col">Price</th>
-      <th scope="col">Quantity</th>
-    </tr>
-  </thead>
-    <td>PE Uniform </td>
-    <td>Large </td>
-    <td>P350.00 </td>
-    <td>20 </td>
-  <tbody>
-  
-  </tbody>
-</table>
-
-
-<!-- End Dashboard Table -->
+				</tbody>
+			</table>
+			<div class="clearfix">
+				<div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+				<ul class="pagination">
+					<li class="page-item disabled"><a href="#">Previous</a></li>
+					<li class="page-item"><a href="#" class="page-link">1</a></li>
+					<li class="page-item"><a href="#" class="page-link">2</a></li>
+					<li class="page-item active"><a href="#" class="page-link">3</a></li>
+					<li class="page-item"><a href="#" class="page-link">4</a></li>
+					<li class="page-item"><a href="#" class="page-link">5</a></li>
+					<li class="page-item"><a href="#" class="page-link">Next</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>        
+</div>
+<!-- Crud end -->
 
 
-<!-- Page Search -->
-<nav aria-label="Search results pages">
-  <ul class="pagination justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>
-
-<!-- End Page Search -->
 
 </body>
 </html>

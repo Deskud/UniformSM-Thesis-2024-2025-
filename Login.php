@@ -24,7 +24,7 @@
                     
                     <div class="Login-content">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Email" name= "email">
+                        <input type="text" placeholder="Username" name= "username">
                     </div>
 
                     <div class="Login-content">
