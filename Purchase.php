@@ -78,7 +78,7 @@
 
 
 <!--Export button download -->
-<div>
+<div class="Button-modifier">
     <button class="btn"><i class="fa-solid fa-file-excel"></i>
     <span> Export to Excel</span>
     </button>

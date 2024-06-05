@@ -74,6 +74,26 @@
 
 <!-- End Sidebar -->
 
+
+
+<!-- Add, Archive, Delete -->
+<div class="Button-modifier">
+    <button class="btn"><i class="fa-solid fa-plus"></i>
+    <span> Add Product</span>
+    </button>
+	<button class="btn"><i class="fa-solid fa-box-archive"></i>
+    <span> Archives</span>
+    </button>
+	<button class="btn"><i class="fa-solid fa-trash"></i>
+    <span> Delete</span>
+    </button>
+</div>
+
+<!-- End Add, Archive, Delete -->
+
+
+
+
 <!-- Crud template temp -->
 <div class="container-xl">
 	<div class="table-responsive">
@@ -121,22 +141,29 @@
 
 				</tbody>
 			</table>
-			<div class="clearfix">
-				<div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
-				<ul class="pagination">
-					<li class="page-item disabled"><a href="#">Previous</a></li>
-					<li class="page-item"><a href="#" class="page-link">1</a></li>
-					<li class="page-item"><a href="#" class="page-link">2</a></li>
-					<li class="page-item active"><a href="#" class="page-link">3</a></li>
-					<li class="page-item"><a href="#" class="page-link">4</a></li>
-					<li class="page-item"><a href="#" class="page-link">5</a></li>
-					<li class="page-item"><a href="#" class="page-link">Next</a></li>
-				</ul>
-			</div>
 		</div>
 	</div>        
 </div>
 <!-- Crud end -->
+
+<!-- pagination start  -->
+
+<nav aria-label="Search results pages">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- pagination end -->
+
 
 
 
