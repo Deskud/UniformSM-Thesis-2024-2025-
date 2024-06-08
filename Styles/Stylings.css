@@ -47,6 +47,12 @@ td,th {
 
 
 
+
+
+
+/* --------------------------------------------------------------------- */
+
+
 /* Start Login Page */
 
 #Login-Logout{
@@ -128,7 +134,7 @@ h5{
 .LoginBox{
    
     width: 400px;
-    height: 390px;
+    height: 320px;
     margin-left: auto;
     margin-right: auto;
     border-radius:10px;
@@ -161,32 +167,25 @@ h5{
     width: 15px;
     height: 15px;
 }
-.Login-Button{
+
+.Login-Button-content{
+    margin-top: 10px;   
+   text-align: right;
+
+}
+.Login-Button-content input{
     margin-left: 250px;
     width:55px;
-    border-radius: 20px;
+    border-radius: 5px;
     display: block;
 }
-.Login-Button:hover{
+.Login-Button-content input:hover{
     opacity: 0.5;
     transition: 0.2s;
  
     
 }
 
-.Login-Button-content{
-    margin-top: 20px;   
-   text-align: right;
-
-}
-.Login-Button-content button{
-    border-radius: 5px;
-    padding: 5px;
-    width: 80px;
-    font-size: 15px;
-   
-
-}
 
 
 
@@ -218,8 +217,6 @@ hr{
     color: white;
     border-top: 1px solid rgb(255 255 255 / 10%);
 }
-
-
 
 
 

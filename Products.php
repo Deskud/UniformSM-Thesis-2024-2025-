@@ -1,5 +1,10 @@
 <?php
-  session_start()
+  session_start();
+
+  
+  $username = ($_SESSION['admin']);
+  if(!isset($_SESSION['admin'])) header('location: Login.php');
+  $username = $_SESSION['admin'];
 
 
 ?>
@@ -15,30 +20,21 @@
     <title>Dashboard</title>
 </head>
 <body class="Dashboard-main">
+  
 <!-- Navigation bar -->
 
-<nav  id="Navbar-bootstrap" class="shadow-lg navbar bg-body-tertiary text" style="background-color: #0454ac;" >
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-      <img src="Styles/BGpics/PCU Logo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
-    Uniform Stock Monitoring System
-    </a>
-    <a class="navbar-logout" href="Logout.php" >
-      <i class="fa-solid fa-right-from-bracket"></i>
-    Sign out
-    </a>
-  </div>
-</nav>
+<?php include "Parts/NavigationBar.php";?>
 
 <!-- End Navbar -->
+
+
 
 <!-- Sidebar -->
 
 <div id="Sidebar-bootstrap" class="shadow-sm d-flex flex-column flex-shrink-0 p-3 bg-body-tertiary bg-dark" style="width: 280px;">
     <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
         <span class="fs-4">
-        <!-- <?=$user['usern_name'] ?> -->
-        Admin
+        <?= $_SESSION['admin'];?>
         </span>
     </a>
 <hr>
@@ -56,7 +52,7 @@
         </a>
       </li>
       <li>
-        <a href="#" class="nav-link active">
+        <a href="Products.php" class="nav-link active">
         <i class="fa-solid fa-shirt"></i>
           Products
         </a>
@@ -67,9 +63,6 @@
           QR Code
         </a>
     </ul>
- 
-
-    
   </div>
 
 <!-- End Sidebar -->
