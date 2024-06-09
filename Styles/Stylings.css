@@ -1,25 +1,23 @@
 /* Start of Global Stlyes */
 
 
+
+.Main-content{
+  
+    margin-top: 50px;
+    margin-left: 400px;
+    margin-right: 400px;
+
+
+    justify-content: center;
+
+}
 /* Remove Blue Link Highlight */
 a{
     color: inherit;
-    
-}
-a:hover{
-    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
 }
-table {
-    table-layout: fixed;
-    word-wrap: break-word;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-td,th {
-  padding: 0;
-}
+
 
 .btn{
     color: #566787;
@@ -34,13 +32,6 @@ td,th {
     margin-left: 10px;
     margin-top: 10px;
  
-}
-
-.Button-modifier{
-    
-    max-width: fit-content;
-    margin-left: 55%;
-    margin-right: auto;
 }
 
 /* End of Global Styles */
@@ -197,16 +188,10 @@ h5{
 
 
 /* Start Dashboard Page */
-.Dashboard-main{
-    background-color:rgb(255, 255, 255);
-    ;
-}
-#Navbar-bootstrap{
-    color: white;
 
-}
 
 #Sidebar-bootstrap{
+    display:block;
     position: fixed;
     height: 100%;
     overflow: auto;
@@ -215,7 +200,6 @@ h5{
 hr{
     margin: 1rem 0;
     color: white;
-    border-top: 1px solid rgb(255 255 255 / 10%);
 }
 
 
