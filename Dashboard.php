@@ -32,6 +32,8 @@ $username = $_SESSION['admin'];
   <div id="Sidebar-bootstrap" class="shadow-sm d-flex flex-column flex-shrink-0 p-3 text-bg-dark side d-none d-md-block col" style="width: 270px;">
     <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
       <span class="fs-4">
+
+        <!-- Shows the name of the user based on the username of the user -->
         <?= $_SESSION['admin']; ?>
       </span>
     </a>
@@ -75,23 +77,6 @@ $username = $_SESSION['admin'];
 
       <!-- Dashboard Table  -->
       <?php include "Dashboard-table.php"; ?>
-
-      <!-- Page Search -->
-      <nav aria-label="Search results pages">
-        <ul class="pagination justify-content-center">
-          <div class="pagination">
-            <li class="page-item disabled">
-              <a class="page-link">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#">Next</a>
-          </div>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>
 
