@@ -32,6 +32,9 @@ $next_page = $page_no + 1;
 //Previous Page
 $previous_page = $page_no - 1;
 
+
+
+
 //Total Count of records
 $result_record_count = mysqli_query($conne, "SELECT COUNT(*) as total_records FROM products");
 
@@ -43,6 +46,9 @@ $total_records = $records['total_records'];
 // PHP math -Ceil function rounds the number up to the nearest integer. Float value result.
 //related to the number of data 
 $total_no_of_pages = ceil($total_records / $total_records_per_page);
+
+
+
 
 
 
@@ -103,10 +109,10 @@ $result = mysqli_query($conne, $query);
         for ($counter = 1; $counter <= $total_no_of_pages; $counter++) { ?>
           <?php if ($page_no != $counter) { ?>
 
-          
+
             <li class="page-item"><a class="page-link" href="?page_no=<?= $counter; ?>"><?= $counter; ?></a></li>
           <?php } else { ?>
-            
+
             <!-- Highlights current page number -->
             <li class="page-item"><a class="page-link active"><?= $counter; ?></a></li>
 

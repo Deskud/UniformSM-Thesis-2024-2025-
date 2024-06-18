@@ -19,7 +19,6 @@ a{
     text-decoration: none;
 }
 
-
 .btn{
     color: #566787;
     float: right;
@@ -34,6 +33,21 @@ a{
     margin-top: 10px;
  
 }
+
+#Sidebar-bootstrap{
+    display:block;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    max-width: 25vw; 
+
+}
+hr{
+    margin: 1rem 0;
+    color: white;
+}
+
+
 
 /* End of Global Styles */
 
@@ -191,20 +205,40 @@ h5{
 /* Start Dashboard Page */
 
 
-#Sidebar-bootstrap{
-    display:block;
-    position: fixed;
-    height: 100%;
-    overflow: auto;
-    max-width: 25vw; 
-
-}
-hr{
-    margin: 1rem 0;
-    color: white;
-}
-
 
 
 
 /* End Dashboard Page */
+/* --------------------------------------------------- */
+/* Sidebar */
+
+
+
+
+
+
+
+/* --------------------------------------------------- */
+/* Products */
+
+.Product_container{
+    max-width: 200px;
+    max-height: 200px;
+
+
+}
+.AddProd form {
+    width: auto;
+    height: 100px;
+    border-radius: 2px;
+
+}
+
+.boxprice, .boxquantity, .selectsize, .boxprod, .Addbutton{
+display: inline-block;
+font-size: 15px;
+margin: 5px;
+}
+
+
+
