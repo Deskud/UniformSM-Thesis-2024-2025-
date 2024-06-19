@@ -3,9 +3,18 @@
 include "dbconnection.php"; //Calls connection to local database
 
 ?>
+
+<!-- Add Products Button -->
 <p class="d-inline-flex gap-1">
     <a class="btn btn-primary" data-bs-toggle="collapse" href="#AddProducts" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa-solid fa-plus"></i> Add Products</a>
 </p>
+<!-- Archives Button -->
+<p class="d-inline-flex gap-1">
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#Archives" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa-solid fa-box-archive"></i> Archives</a>
+</p>
+
+
+<!-- Add Product Content -->
 <div class="row">
     <div class="col">
         <div class="collapse multi-collapse" id="AddProducts">
@@ -43,3 +52,30 @@ include "dbconnection.php"; //Calls connection to local database
         </div>
     </div>
 </div>
+<!-- End Add Products Content -->
+
+<!-- Start Archives Content -->
+<div class="row">
+    <div class="col">
+        <div class="collapse multi-collapse" id="Archives">
+            <div class="card card-body">
+                <div class="container-xl">
+                    <div class="table-responsive">
+                        <table class="table table-bordered col-xl">
+                            <thead>
+                                <tr>
+                                    <th>Product Name</th>
+                                    <th>Date Archived</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Archives -->
+
+<?php include "Parts/Products-table.php"; ?>
