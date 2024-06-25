@@ -1,7 +1,31 @@
 <?php
 
 include "dbconnection.php"; //Calls connection to local database
+if (isset($_POST['Add'])) {
 
+    //Uses the name of the input (input type ="text" name = "size")
+    $product_name = $_POST['name'];
+    $product_size = $_POST['size'];
+    $product_price = $_POST['price'];
+    $product_quant = $_POST['quantity'];
+    $product_gend = $_POST['gend'];
+    
+    //Database table name = products in products 5 rows: Product, Size, Price, Quantity, and  Gender
+    $insertdata = "INSERT INTO products(Product, Size, Price, Quantity, Gender) 
+                VALUES('$product_name', '$product_size', '$product_price', '$product_quant', '$product_gend')";
+
+    $addproducts = mysqli_query($conne, $insertdata);
+    if ($addproducts) {
+        echo "Success";
+    } else {
+        echo "OOF";
+    }
+};
+if (isset($_GET['delete'])) {
+    $idget = $_GET['delete'];
+    mysqli_query($conne, "DELETE FROM products WHERE ID = $idget");
+    header('location:Products.php');
+}
 ?>
 
 <!-- Add Products Button -->
@@ -42,7 +66,11 @@ include "dbconnection.php"; //Calls connection to local database
                             </select>
                             <input type="number" placeholder="Enter Price" name="price" class="boxprice">
                             <input type="number" placeholder="Enter Quantity" name="quantity" class="boxquantity">
-
+                            <select class="selectsize" name="gend">
+                                <option selected>Gender</option>
+                                <option value="Small">Male</option>
+                                <option value="Medium">Female</option>
+                            </select>
                             <input type="submit" name="Add" class="Addbutton" value="Add Product">
                         </form>
 

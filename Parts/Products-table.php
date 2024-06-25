@@ -39,7 +39,6 @@ $result = mysqli_query($conne, $query);
 
 <!-- Search data -->
 <div>
-    <input type="checkbox"> Select All
     <a><i class="fa-solid fa-trash"></i></i></a>
     <a><i class="fa-solid fa-box-archive"></i> </a>
     <input type="text" placeholder="Search...">
@@ -51,6 +50,7 @@ $result = mysqli_query($conne, $query);
         <table class="table table-bordered col-xl">
             <thead>
                 <tr>
+                    <th><input type="checkbox"></i></th>
                     <th>Product Id</i></th>
                     <th>Product </th>
                     <th>Gender</th>
@@ -64,8 +64,9 @@ $result = mysqli_query($conne, $query);
 
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-                    <td><input type="checkbox"> <?php echo $row['ID'] ?></td>
+                ?>  
+                    <td><input type="checkbox"></td>
+                    <td><?php echo $row['ID'] ?></td>
                     <td><?php echo $row['Product'] ?></td>
                     <td><?php echo $row['Gender'] ?></td>
                     <td><?php echo $row['Size'] ?></td>
@@ -76,7 +77,7 @@ $result = mysqli_query($conne, $query);
 
                         <a href="Products.php?delete=<?php echo $row['ID']; ?>"><i class="fa-solid fa-trash"></i></i></a>
 
-                        <a href="Products.php?delete=<?php echo $row['ID']; ?>"><i class="fa-solid fa-box-archive"></i></a>
+                        <a href="Products.php?archive=<?php echo $row['ID']; ?>"><i class="fa-solid fa-box-archive"></i></a>
 
                     </td>
             </tr>

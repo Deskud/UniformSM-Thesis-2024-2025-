@@ -52,26 +52,26 @@ $username = $_SESSION['admin'];
     <ul id="sidebar-main">
       <ul class="nav nav-pills flex-column mb-auto">
 
-        <a href="Dashboard.php" class="nav-link text-white" data-target="Dashboard.php">
+        <a href="Dashboard.php" class="nav-link text-white" data-target="Dashboard.php" onclick="loadDash()">
           <i class="fa-solid fa-gauge"></i>
           Dashboard
         </a>
         </li>
         <li>
-          <a href="Purchase.php" class="nav-link text-white" data-target="Purchase.php">
+          <a href="Purchase.php" class="nav-link text-white" data-target="Purchase.php" onclick="loadPurchase()">
             <i class="fa-solid fa-arrow-trend-up"></i>
             Purchase History
           </a>
         </li>
         <li>
-          <a href="Products.php" class="nav-link text-white" data-target="Products.php">
+          <a href="Products.php" class="nav-link text-white" data-target="Products.php" onclick="loadProduct()">
             <i class="fa-solid fa-shirt"></i>
             Products
           </a>
         </li>
         <li>
-          <a href="QR.php" class="nav-link text-white" data-target="QR.php">
-            <i class="fa-solid fa-qrcode"></i>
+          <a href="QR.php" class="nav-link text-white" data-target="QR.php" onclick="loadQR()>
+            <i class=" fa-solid fa-qrcode"></i>
             QR Code
           </a>
         </li>
@@ -98,18 +98,46 @@ $username = $_SESSION['admin'];
 <script>
 
   //Temporary "no full page reload"
+  // $(document).ready(function() {
+  //   var trigger = $('#sidebar-main ul li a'),
+  //     container = $('.Main-content');
+  //   trigger.on('click', function() {
+  //     var $this = $(this),
+  //       target = $this.data('target');
+  //     console.log(target);
+  //     container.load(target);
+
+  //     return false;
+  //   });
+  // });
+
+  // Temporary single page reload it works but needs improvement
+  // Problema lang ay kapag nag ne-next page sa products nawawala yung css at shits. Fixing it next commit 
   $(document).ready(function() {
     var trigger = $('#sidebar-main ul li a'),
       container = $('.Main-content');
+
     trigger.on('click', function() {
       var $this = $(this),
-        target = $this.data('target');
-      console.log(target);
-      container.load(target);
+        target = $this.data('target'),
+        newUrl = target;
+
+      $.ajax({
+        url: target,
+        success: function(data) {
+          container.html(data); // 
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+          console.error("Error loading content:", textStatus, errorThrown);
+        }
+      });
+
+      window.history.pushState({}, "", newUrl);
+
 
       return false;
     });
   });
-</script>
 
+</script>
 </html>
