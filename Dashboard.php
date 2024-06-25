@@ -70,8 +70,8 @@ $username = $_SESSION['admin'];
           </a>
         </li>
         <li>
-          <a href="QR.php" class="nav-link text-white" data-target="QR.php" onclick="loadQR()>
-            <i class=" fa-solid fa-qrcode"></i>
+          <a href="QR.php" class="nav-link text-white" data-target="QR.php" onclick="loadQR()">
+            <i class="fa-solid fa-qrcode"></i>
             QR Code
           </a>
         </li>
