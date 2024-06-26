@@ -52,27 +52,33 @@ $username = $_SESSION['admin'];
     <ul id="sidebar-main">
       <ul class="nav nav-pills flex-column mb-auto">
 
-        <a href="Dashboard.php" class="nav-link text-white" data-target="Dashboard.php" onclick="loadDash()">
+        <a href="Dashboard.php" class="nav-link text-white" data-target="Dashboard.php">
           <i class="fa-solid fa-gauge"></i>
           Dashboard
         </a>
         </li>
         <li>
-          <a href="Purchase.php" class="nav-link text-white" data-target="Purchase.php" onclick="loadPurchase()">
+          <a href="Purchase.php" class="nav-link text-white" data-target="Purchase.php">
             <i class="fa-solid fa-arrow-trend-up"></i>
             Purchase History
           </a>
         </li>
         <li>
-          <a href="Products.php" class="nav-link text-white" data-target="Products.php" onclick="loadProduct()">
+          <a href="Products.php" class="nav-link text-white" data-target="Products.php" >
             <i class="fa-solid fa-shirt"></i>
             Products
           </a>
         </li>
         <li>
-          <a href="QR.php" class="nav-link text-white" data-target="QR.php" onclick="loadQR()">
+          <a href="QR.php" class="nav-link text-white" data-target="QR.php" >
             <i class="fa-solid fa-qrcode"></i>
             QR Code
+          </a>
+        </li>
+        <li>
+          <a href="Archives.php" class="nav-link text-white" data-target="Archives.php" >
+          <i class="fa-solid fa-box-archive"></i>
+            Archive
           </a>
         </li>
       </ul>
@@ -96,7 +102,6 @@ $username = $_SESSION['admin'];
   </div>
 </body>
 <script>
-
   //Temporary "no full page reload"
   // $(document).ready(function() {
   //   var trigger = $('#sidebar-main ul li a'),
@@ -138,6 +143,6 @@ $username = $_SESSION['admin'];
       return false;
     });
   });
-
 </script>
+
 </html>

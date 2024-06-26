@@ -76,9 +76,6 @@ $result = mysqli_query($conne, $query);
                         <a href="Edit_Product.php?edit=<?php echo $row['ID']; ?>"><i class="fa-solid fa-pen-to-square"></i></i></a>
 
                         <a href="Products.php?delete=<?php echo $row['ID']; ?>"><i class="fa-solid fa-trash"></i></i></a>
-
-                        <a href="Products.php?archive=<?php echo $row['ID']; ?>"><i class="fa-solid fa-box-archive"></i></a>
-
                     </td>
             </tr>
         <?php

@@ -9,9 +9,9 @@ if (isset($_POST['Add'])) {
     $product_price = $_POST['price'];
     $product_quant = $_POST['quantity'];
     $product_gend = $_POST['gend'];
-    
+
     //Database table name = products in products 5 rows: Product, Size, Price, Quantity, and  Gender
-    $insertdata = "INSERT INTO products(Product, Size, Price, Quantity, Gender) 
+    $insertdata = "INSERT INTO products (Product, Size, Price, Quantity, Gender) 
                 VALUES('$product_name', '$product_size', '$product_price', '$product_quant', '$product_gend')";
 
     $addproducts = mysqli_query($conne, $insertdata);
@@ -22,7 +22,10 @@ if (isset($_POST['Add'])) {
     }
 };
 if (isset($_GET['delete'])) {
+
     $idget = $_GET['delete'];
+
+
     mysqli_query($conne, "DELETE FROM products WHERE ID = $idget");
     header('location:Products.php');
 }
@@ -32,11 +35,6 @@ if (isset($_GET['delete'])) {
 <p class="d-inline-flex gap-1">
     <a class="btn btn-primary" data-bs-toggle="collapse" href="#AddProducts" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa-solid fa-plus"></i> Add Products</a>
 </p>
-<!-- Archives Button -->
-<p class="d-inline-flex gap-1">
-    <a class="btn btn-primary" data-bs-toggle="collapse" href="#Archives" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><i class="fa-solid fa-box-archive"></i> Archives</a>
-</p>
-
 
 <!-- Add Product Content -->
 <div class="row">
@@ -81,29 +79,5 @@ if (isset($_GET['delete'])) {
     </div>
 </div>
 <!-- End Add Products Content -->
-
-<!-- Start Archives Content -->
-<div class="row">
-    <div class="col">
-        <div class="collapse multi-collapse" id="Archives">
-            <div class="card card-body">
-                <div class="container-xl">
-                    <div class="table-responsive">
-                        <table class="table table-bordered col-xl">
-                            <thead>
-                                <tr>
-                                    <th>Product Name</th>
-                                    <th>Date Archived</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- End Archives -->
 
 <?php include "Parts/Products-table.php"; ?>

@@ -53,23 +53,23 @@ if (isset($_POST['submit'])) {
             <h3>Login to your account</h3>
 
             <div class="Login-content">
-                <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="Username" name="user">
-            </div>
+                    <i class="fa-solid fa-user" id="icon-bg"></i>
+                    <input type="text" placeholder="Username" name="user">
+                </div>
 
-            <div class="Login-content">
-                <i class="fa-solid fa-lock"></i>
-                <input type="password" placeholder="Password" name="pass">
-            </div>
+                <div class="Login-content">
+                        <i class="fa-solid fa-lock" id="icon-bg"></i>
+                    <input type="password" placeholder="Password" name="pass">
+                </div>
 
-            <!-- <div class="Login-checkbox">
+                <!-- <div class="Login-checkbox">
                         <input type="checkbox" name="remember">  Remember me
                         
                     </div> -->
 
-            <div class="Login-Button-content">
-                <input type="submit" class="Login-Button" value="Login" name="submit">
-            </div>
+                <div class="Login-Button-content">
+                    <input type="submit" class="Login-Button" value="Login" name="submit">
+                </div>
         </form>
     </div>
     <script>
