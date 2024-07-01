@@ -1,25 +1,24 @@
 /* Start of Global Stlyes */
 
+.Main-content {
 
-
-.Main-content{
-  
     margin-top: 50px;
     margin-left: 400px;
     margin-right: 400px;
-   
+
 
 
     justify-content: center;
 
 }
+
 /* Remove Blue Link Highlight */
-a{
+a,i {
     color: inherit;
     text-decoration: none;
 }
 
-.btn{
+.btn {
     color: #566787;
     float: right;
     font-size: 15px;
@@ -31,22 +30,27 @@ a{
     outline: none !important;
     margin-left: 10px;
     margin-top: 10px;
- 
+
 }
 
-#Sidebar-bootstrap{
-    display:block;
+#Sidebar-bootstrap {
+    display: block;
     position: fixed;
     height: 100%;
     overflow: auto;
-    max-width: 25vw; 
+    max-width: 25vw;
 
 }
-hr{
+
+hr {
     margin: 1rem 0;
     color: white;
 }
 
+.table-responsive{
+
+    max-height: 500px;
+}
 
 
 /* End of Global Styles */
@@ -61,7 +65,7 @@ hr{
 
 /* Start Login Page */
 
-#Login-Logout{
+#Login-Logout {
 
 
     background-repeat: no-repeat;
@@ -70,7 +74,7 @@ hr{
     background-position: center center;
     transition: 30s;
     height: 0;
-   
+
 
     animation-name: bgSlides;
     animation-direction: alternate-reverse;
@@ -79,49 +83,49 @@ hr{
     animation-iteration-count: infinite;
     animation-play-state: running;
     animation-timing-function: ease-in-out;
-  
+
 
 
 }
-@keyframes bgSlides{
-    0%
-    {
+
+@keyframes bgSlides {
+    0% {
         background-image: url(BGpics/1.jpg);
     }
-    20%
-    {
+
+    20% {
         background-image: url(BGpics/2.jpg);
     }
-    40%
-    {
+
+    40% {
         background-image: url(BGpics/3.jpg);
     }
-    60%
-    {
+
+    60% {
         background-image: url(BGpics/4.jpg);
     }
-    80%
-    {
+
+    80% {
         background-image: url(BGpics/5.jpg);
     }
-    100%
-    {
+
+    100% {
         background-image: url(BGpics/6.jpg);
     }
 }
 
-
-h3{
+h3 {
     text-align: center;
     color: aliceblue;
     font-size: 25px;
 }
-h5{
+
+h5 {
     text-align: center;
     color: rgb(0, 0, 0);
 }
 
-.pculogo{
+.pculogo {
     margin-top: 50px;
     width: 150px;
     height: 150px;
@@ -131,27 +135,28 @@ h5{
 
 }
 
-.LoginContainer{
+.LoginContainer {
     margin-top: 40px;
-    
-   
+
+
 }
 
-.LoginBox{
-   
+.LoginBox {
+
     width: 400px;
     height: 320px;
     margin-left: auto;
     margin-right: auto;
-    border-radius:10px;
+    border-radius: 10px;
     /* border:solid 2px #cccccc; */
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8) ;
+    background-color: rgba(0, 0, 0, 0.8);
     color: aliceblue;
 
-   
+
 }
-.Login-content{
+
+.Login-content {
     width: 100%;
     height: 50px;
     margin-top: 35px;
@@ -159,37 +164,41 @@ h5{
     text-align: center;
     display: block;
 }
-.Login-content input{
+
+.Login-content input {
 
     width: 250px;
 
-} 
-.Login-checkbox{
+}
+
+.Login-checkbox {
     margin-top: 20px;
     margin-left: 50px;
 }
 
-.Login-checkbox input{
+.Login-checkbox input {
     width: 15px;
     height: 15px;
 }
 
-.Login-Button-content{
-    margin-top: 10px;   
-   text-align: right;
+.Login-Button-content {
+    margin-top: 10px;
+    text-align: right;
 
 }
-.Login-Button-content input{
+
+.Login-Button-content input {
     margin-left: 250px;
-    width:65px;
+    width: 65px;
     border-radius: 10px;
     display: block;
 }
-.Login-Button-content input:hover{
+
+.Login-Button-content input:hover {
     opacity: 0.5;
     transition: 0.2s;
- 
-    
+
+
 }
 
 #icon-bg {
@@ -231,12 +240,14 @@ h5{
 /* --------------------------------------------------- */
 /* Products */
 
-.Product_container{
+.Product_container {
     max-width: 200px;
     max-height: 200px;
 
 
 }
+
+
 .AddProd form {
     width: auto;
     height: 100px;
@@ -244,11 +255,12 @@ h5{
 
 }
 
-.boxprice, .boxquantity, .selectsize, .boxprod, .Addbutton{
-display: inline-block;
-font-size: 15px;
-margin: 5px;
+.boxprice,
+.boxquantity,
+.selectsize,
+.boxprod,
+.Addbutton {
+    display: inline-block;
+    font-size: 15px;
+    margin: 5px;
 }
-
-
-

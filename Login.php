@@ -47,7 +47,7 @@ if (isset($_POST['submit'])) {
 
 <body id="Login-Logout">
     <img src="Styles/BGpics/PCU Logo.png" class="pculogo">
-
+    <h1 style="text-align: center; color:aliceblue; font: size 30px;">Philippine Christian University</h1>
     <div class="LoginContainer">
         <form name="form" action="Login.php" class="LoginBox" onsubmit="return isvalid()" method="post">
             <h3>Login to your account</h3>

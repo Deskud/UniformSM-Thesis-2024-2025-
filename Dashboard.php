@@ -24,125 +24,25 @@ $username = $_SESSION['admin'];
   <title>Dashboard</title>
 </head>
 
+
 <body>
+  <div class="navbar-container">
+    <?php include "Parts/Navbar.php"; ?>
 
-  <!-- Navigation bar -->
-
-  <nav class="shadow-lg navbar" style="background-color: #0454ac;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="Styles/BGpics/PCU Logo.png" alt="Logo" width="35" height="35" class="d-inline-block align-text-top">
-        <span style="color: white;">Uniform Stock Monitoring System</span>
-      </a>
-    </div>
-  </nav>
-
-  <!-- End Navbar -->
-
-  <!-- Sidebar start -->
-  <div id="Sidebar-bootstrap" class="shadow-sm d-flex flex-column flex-shrink-0 p-3 text-bg-dark side d-none d-md-block col" style="width: 270px;">
-    <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-      <span class="fs-4">
-
-        <!-- Shows the name of the user based on the username of the user -->
-        <?= $_SESSION['admin']; ?>
-      </span>
-    </a>
-    <hr>
-    <ul id="sidebar-main">
-      <ul class="nav nav-pills flex-column mb-auto">
-
-        <a href="Dashboard.php" class="nav-link text-white" data-target="Dashboard.php">
-          <i class="fa-solid fa-gauge"></i>
-          Dashboard
-        </a>
-        </li>
-        <li>
-          <a href="Purchase.php" class="nav-link text-white" data-target="Purchase.php">
-            <i class="fa-solid fa-arrow-trend-up"></i>
-            Purchase History
-          </a>
-        </li>
-        <li>
-          <a href="Products.php" class="nav-link text-white" data-target="Products.php" >
-            <i class="fa-solid fa-shirt"></i>
-            Products
-          </a>
-        </li>
-        <li>
-          <a href="QR.php" class="nav-link text-white" data-target="QR.php" >
-            <i class="fa-solid fa-qrcode"></i>
-            QR Code
-          </a>
-        </li>
-        <li>
-          <a href="Archives.php" class="nav-link text-white" data-target="Archives.php" >
-          <i class="fa-solid fa-box-archive"></i>
-            Archive
-          </a>
-        </li>
-      </ul>
-    </ul>
-    <hr>
-    <div class="sidebar-footer">
-      <a class="sidebar-logout" href="Logout.php">
-        <i class="fa-solid fa-right-from-bracket"></i>
-        <span>Sign out</span>
-      </a>
-    </div>
   </div>
-  <!-- Side bar end -->
 
-  <div class="Pages-main-container">
-    <div class="Main-content">
-      <!-- Dashboard Table  -->
-      <?php include "Parts/Dashboard-table.php"; ?>
+  <div class="sidebar-container">
 
-    </div>
+    <?php include "Parts/Sidebar.php"; ?>
   </div>
+
+  <div class="Main-content">
+    <!-- Dashboard Table  -->
+    <?php include "Parts/Dashboard-table.php"; ?>
+
+  </div>
+
 </body>
-<script>
-  //Temporary "no full page reload"
-  // $(document).ready(function() {
-  //   var trigger = $('#sidebar-main ul li a'),
-  //     container = $('.Main-content');
-  //   trigger.on('click', function() {
-  //     var $this = $(this),
-  //       target = $this.data('target');
-  //     console.log(target);
-  //     container.load(target);
-
-  //     return false;
-  //   });
-  // });
-
-  // Temporary single page reload it works but needs improvement
-  // Problema lang ay kapag nag ne-next page sa products nawawala yung css at shits. Fixing it next commit 
-  $(document).ready(function() {
-    var trigger = $('#sidebar-main ul li a'),
-      container = $('.Main-content');
-
-    trigger.on('click', function() {
-      var $this = $(this),
-        target = $this.data('target'),
-        newUrl = target;
-
-      $.ajax({
-        url: target,
-        success: function(data) {
-          container.html(data); // 
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-          console.error("Error loading content:", textStatus, errorThrown);
-        }
-      });
-
-      window.history.pushState({}, "", newUrl);
-
-
-      return false;
-    });
-  });
-</script>
+<!-- <script src="JScripts/No-reload-script.js"></script> -->
 
 </html>

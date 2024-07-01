@@ -38,10 +38,8 @@ $result = mysqli_query($conne, $query);
 
 
 <!-- Search data -->
-<div>
-    <a><i class="fa-solid fa-trash"></i></i></a>
-    <a><i class="fa-solid fa-box-archive"></i> </a>
-    <input type="text" placeholder="Search...">
+<div class="products-table-top-nav">
+    <input type="text" placeholder="Search..." id="search-data">
 </div>
 
 <!-- Product table -->
@@ -50,31 +48,32 @@ $result = mysqli_query($conne, $query);
         <table class="table table-bordered col-xl">
             <thead>
                 <tr>
-                    <th><input type="checkbox"></i></th>
+                    <th><input type="checkbox"></th>
                     <th>Product Id</i></th>
                     <th>Product </th>
                     <th>Gender</th>
                     <th>Size</th>
                     <th>Price <a href="#"><i class="fa-solid fa-sort"></a></i></th>
                     <th>Quantity <a href="#"><i class="fa-solid fa-sort"></a></i></th>
-                    <th colspan="2">Action</th>
+                    <th>Date_Added</i></th>
+                    <th style="text-align: center; width:5px;" colspan="2">Action</th>
                 </tr>
             </thead>
             <tr>
 
                 <?php
                 while ($row = mysqli_fetch_assoc($result)) {
-                ?>  
-                    <td><input type="checkbox"></td>
+                ?>
+                    <td style="text-align: center; width:10px;"><input type="checkbox"></td>
                     <td><?php echo $row['ID'] ?></td>
                     <td><?php echo $row['Product'] ?></td>
                     <td><?php echo $row['Gender'] ?></td>
                     <td><?php echo $row['Size'] ?></td>
                     <td><?php echo $row['Price'] ?></td>
                     <td><?php echo $row['Quantity'] ?></td>
-                    <td>
-                        <a href="Edit_Product.php?edit=<?php echo $row['ID']; ?>"><i class="fa-solid fa-pen-to-square"></i></i></a>
-
+                    <td><?php echo $row['date_added'] ?></td>
+                    <td style="text-align: center; width:5px;">
+                        <a href="Products-edit-data.php?edit=<?php echo $row['ID']; ?>"><i class="fa-solid fa-pen-to-square"></i></i></a>
                         <a href="Products.php?delete=<?php echo $row['ID']; ?>"><i class="fa-solid fa-trash"></i></i></a>
                     </td>
             </tr>
