@@ -1,4 +1,6 @@
 <?php
+include "dbconnection.php";
+
 session_start();
 
 
@@ -35,8 +37,8 @@ $username = $_SESSION['admin'];
     </div>
 
     <div class="Main-content">
-        
-    
+        <?php include "Parts/Purchase-table.php"; ?>
+
     </div>
 </body>
 

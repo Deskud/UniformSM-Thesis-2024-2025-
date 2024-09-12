@@ -8,7 +8,7 @@
     $conne = new mysqli($servername, $username, $password, $dbname);
 
     if(!$conne){
-        echo "Connection FAILED!";
+       die("Connection Failed!");
     }
    
     

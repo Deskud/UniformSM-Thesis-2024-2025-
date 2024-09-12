@@ -21,11 +21,10 @@ if (isset($_POST['Edit'])) {
     $product_gend = $_POST['gend'];
 
 
-    if(empty($product_name)|| empty($product_size)|| empty($product_price)|| empty($product_quant)|| empty($product_gend)){
+    if (empty($product_name) || empty($product_size) || empty($product_price) || empty($product_quant) || empty($product_gend)) {
         echo "Please fill out the following.";
-    }
-    else{
-        
+    } else {
+
         $updateData = "UPDATE products SET Product = '$product_name',  Gender ='$product_gend',  Size = '$product_size', Price = '$product_price', Quantity = '$product_quant' WHERE ID = $idgetupdate";
 
         $productUpdated = mysqli_query($conne, $updateData);
@@ -48,9 +47,14 @@ if (isset($_POST['Edit'])) {
     <title>Update Products</title>
 </head>
 
-<body>
-    <div class=Product_container>
-        <div class="AddProd">
+<body id="Products-edit-bg">
+
+    <div class="navbar-container">
+        <?php include "Parts/Navbar.php"; ?>
+
+    </div>
+    <div class="Product_container">
+        <div class="EditProd">
             <form action="" method="post" enctype='multipart/form-data'>
                 <h6>Update Products</h6>
                 <select class="boxprod" name="name">
